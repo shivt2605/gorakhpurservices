@@ -69,9 +69,9 @@ class Internship(admin.TabularInline):
 
 class Response_admin(admin.ModelAdmin):
     inlines = (Meeting,Follow_Up,Visit,For_Coaching,For_Job,Internship)  
-    list_display=('id','city','name','number','status','call_status', 'comment','submitter','created_at','update_at')
-    list_editable=('name','status','call_status') 
-    list_filter = ('status','call_status','submitter','created_at','update_at') 
+    list_display=['id','city','name','number','status','call_status','comment','submitter','created_at','update_at']
+    list_editable=('name','status','call_status',) 
+    list_filter = ('submitter','created_at','update_at','call_status','status','city',) 
     search_fields = ('name','number','comment',)
     list_per_page = 20 
 admin.site.register(Response,Response_admin)

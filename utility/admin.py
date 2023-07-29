@@ -57,7 +57,7 @@ admin.site.register(Intested_Type,Intested_Type_admin)
 
 # ---------------------------------------------------Register your models here.------------------------------------------
 class Intested_For_admin(admin.ModelAdmin):    
-    list_display=('id','submitter','created_at','update_at')    
+    list_display=('id','status','submitter','created_at','update_at')    
 admin.site.register(Intested_For,Intested_For_admin)
 
 

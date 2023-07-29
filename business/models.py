@@ -11,8 +11,8 @@ class Response(models.Model):
     city = models.ForeignKey(City, on_delete=models.DO_NOTHING, blank=True, null=True )
     number = models.CharField(max_length=12)
     name = models.CharField(max_length=500)    
-    status = models.ForeignKey(Response_Status, blank=True, null=True , on_delete=models.DO_NOTHING,)
-    intested_for = models.ManyToManyField(Intested_For)
+    status = models.ForeignKey(Response_Status, blank=True, null=True, on_delete=models.DO_NOTHING,)
+    intested_for = models.ManyToManyField(Intested_For, blank=True, null=True,)
     comment = models.TextField()
     call_status = models.ForeignKey(Call_Status, blank=True,null=True, on_delete=models.DO_NOTHING,)
     
